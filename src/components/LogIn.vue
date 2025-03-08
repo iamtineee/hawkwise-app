@@ -7,6 +7,8 @@ const handleLogin = () => {
     errorMessage.value = !email.value || !password.value ? 'Please fill in both fields!' : '';
     if (!errorMessage.value) alert(`Logging in with Email: ${email.value}`);
 };
+
+console.log("VITE_FIREBASE_API_KEY:", import.meta.env.VITE_FIREBASE_API_KEY);
 </script>
 
 <template>
