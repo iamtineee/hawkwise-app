@@ -8,7 +8,6 @@ const handleLogin = () => {
     if (!errorMessage.value) alert(`Logging in with Email: ${email.value}`);
 };
 
-console.log("VITE_FIREBASE_API_KEY:", import.meta.env.VITE_FIREBASE_API_KEY);
 </script>
 
 <template>
@@ -27,9 +26,10 @@ console.log("VITE_FIREBASE_API_KEY:", import.meta.env.VITE_FIREBASE_API_KEY);
 
             <p v-if="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
 
-            <button type="submit" class="w-full bg-#008000 hover:bg-blue-600 text-white py-2 rounded-lg transition">
-                Log In
+            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
+             Log In
             </button>
+
         </form>
     </div>
 </template>
