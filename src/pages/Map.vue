@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Sidebar from '../layouts/Sidebar.vue';
+import MapView from '../components/MapView.vue';
 </script>
 
 <template>
@@ -7,10 +8,9 @@ import Sidebar from '../layouts/Sidebar.vue';
     <!-- Sidebar -->
     <Sidebar />
 
-    <!-- Map Content -->
-    <div class="flex-1 p-6">
-      <h2 class="text-2xl font-bold">Welcome to the Admin Maps</h2>
-      <p class="mt-4">Here you can manage your application data.</p>
+    <!-- Full-page Map -->
+    <div class="flex-1">
+      <MapView />
     </div>
   </div>
 </template>
