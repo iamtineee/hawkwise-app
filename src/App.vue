@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import LogIn from './components/LogIn.vue'
+import { useRouter } from 'vue-router'; // Import router to track current route
+
 </script>
 
 <template>
-  <div class="flex items-center justify-center min-h-screen">
-    <LogIn />
-  </div>
+  <!-- The router-view is where Vue Router will insert the active component (LogIn or Dashboard) -->
+  <router-view />
 </template>
