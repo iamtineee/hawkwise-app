@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import LogIn from '../pages/LogIn.vue';
-import Dashboard from '../pages/Dashboard.vue';
-import Map from '../pages/Map.vue';
-import Teams from '../pages/Teams.vue';
-import Settings from '../pages/Settings.vue';
+import LogIn from '../pages/admin/LogIn.vue';
+import Dashboard from '../pages/admin/Dashboard.vue';
+import Map from '../pages/admin/Map.vue';
+import Teams from '../pages/admin/Teams.vue';
+import Settings from '../pages/admin/Settings.vue';
+import Users from '../pages/admin/Users.vue';
 
 const routes = [
   {
@@ -33,6 +34,12 @@ const routes = [
     path: '/settings',
     name: 'Settings',
     component: Settings,
+    meta: { requiresAuth: true }, // Protect this route with authentication
+  },
+  {
+    path: '/users',
+    name: 'Users',
+    component: Users,
     meta: { requiresAuth: true }, // Protect this route with authentication
   },
 ];

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import logo from '../assets/logo.png';
-import { auth } from '../firebase.ts';
+import logo from '../../assets/logo.png';
+import { auth } from '../../firebase.ts';
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useRouter } from 'vue-router';
 

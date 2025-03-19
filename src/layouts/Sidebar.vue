@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router'; 
 import { signOut } from 'firebase/auth';
 import { auth } from "../firebase";
-import { CogIcon, ArrowLeftStartOnRectangleIcon, MapIcon, UserGroupIcon, HomeIcon } from '@heroicons/vue/16/solid';
+import { CogIcon, ArrowLeftStartOnRectangleIcon, MapIcon, UserGroupIcon, HomeIcon, UserPlusIcon } from '@heroicons/vue/16/solid';
 
 const isOpen = ref(false), route = useRoute(), router = useRouter(); // isOpen is a reactive variable that controls whether the sidebar is open(true) or closed(false). Initially, we set it to false so the sidebar starts in a collapsed state.
 
@@ -60,6 +60,17 @@ const logout = async () => {
               <!-- Teams Icon -->
               <UserGroupIcon class="h-6 w-6 transition-all" />
               <span v-if="isOpen" class="text-sm"> Teams </span>              
+            </router-link>
+          </li>
+          <li class="mb-4">
+            <router-link
+              to="/users"
+              class="flex items-center space-x-4 p-2 hover:bg-green-700 rounded-lg transition-all"
+              :class="route.path === '/users' ? 'bg-green-700' : 'hover:bg-green-700'"
+              >
+              <!-- Add User Icon -->
+              <UserPlusIcon class="h-6 w-6 transition-all" />
+              <span v-if="isOpen" class="text-sm"> Users </span>              
             </router-link>
           </li>
           <li class="mb-4">
